@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import { Urbanist } from 'next/font/google';
 
 import './globals.css';
@@ -8,7 +7,7 @@ import Navbar from "@/components/nav-bar";
 
 const font = Urbanist({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Store',
   description: 'Store',
 }
