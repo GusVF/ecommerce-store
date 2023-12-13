@@ -7,17 +7,19 @@ import { Product } from "@/types";
 import Currency from "@/components/ui/currency";
 import Button from "@/components/ui/button";
 import useCart from "@/hooks/use-cart";
+import { MouseEventHandler } from "react";
 
 interface InfoProps {
   data: Product;
 };
-
 const Info: React.FC<InfoProps> = ({
   data
 }) => {
   const cart = useCart();
-  const onAddToCart = () => {
-    cart.addItem(data)
+  const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
+    event.stopPropagation();
+    
+    cart.addItem(data);
   };
 
   return (
