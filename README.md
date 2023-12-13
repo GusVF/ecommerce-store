@@ -10,39 +10,40 @@ Welcome to the Ecommerce Store project! This project serves as the frontend for 
 
 ## Getting Started
 
-1. **Clone the Repository**
+1. **Clone the Repository:**
 
    ```bash
    git clone https://github.com/your-username/ecommerce-store.git
    cd ecommerce-store
-Install Dependencies
+Install Dependencies:
 
 bash
 Copy code
 npm install
-Run the Development Server
+Run the Development Server:
 
 bash
 Copy code
 npm run dev
 Open http://localhost:3000 in your browser.
 
-Build for Production
+Build for Production:
 
 bash
 Copy code
 npm run build
 This command generates a production-ready build.
 
-Environment Variables
-remember to create your .env file and add the http from port 3000.
+Environment Variables:
+
+Remember to create your .env file and add the HTTP port (e.g., http://localhost:3000).
 NEXT_PUBLIC_API_URL: The base URL for the backend API.
-## Technologies Used:
+Technologies Used:
 Next.js
 React
 Lucide-react
 Tailwind
 Eslint
 Typescript
-
-
+Deployment:
+The application is deployed on Vercel. You can access it at https://ecommerce-store-peach-psi.vercel.app/
