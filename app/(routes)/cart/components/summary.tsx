@@ -1,27 +1,27 @@
 "use client" 
 
 import axios from "axios";
-// import { useEffect } from "react";
-// import { useSearchParams } from "next/navigation";
-// import toast from "react-hot-toast";
+import { useEffect } from "react";
+import { useSearchParams } from "next/navigation";
+import toast from "react-hot-toast";
 
 import Button from "@/components/ui/button";
 import Currency from "@/components/ui/currency";
 import  useCart  from "@/hooks/use-cart";
 
 const Summary = () => {
-  // const searchParams = useSearchParams();
+  const searchParams = useSearchParams();
   const items = useCart((state) => state.items);
   const removeAll = useCart((state) => state.removeAll);
-  // The useEffect was commented because I could not figure out why the messages where rendering twice
-  // useEffect(() => {
-  //   if(searchParams.get("success")) {
-  //     toast.success("Order placed with success!")
-  //   }
-  //   if(searchParams.get("canceled")) {
-  //     toast.error("Order canceled with success!")
-  //   }
-  // }, [searchParams, removeAll]);
+
+  useEffect(() => {
+    if(searchParams.get("success")) {
+      toast.success("Order placed with success!")
+    }
+    if(searchParams.get("canceled")) {
+      toast.error("Order canceled with success!")
+    }
+  }, [searchParams, removeAll]);
 
   const totalPrice = items.reduce((total, items) => {
     return total + Number(items.price);
